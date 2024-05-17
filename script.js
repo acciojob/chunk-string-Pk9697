@@ -1,5 +1,18 @@
 function stringChop(str, size) {
   // your code here
+	const ans=[]
+	let chunk="";
+	str.split('').forEach((ch)=>{
+		chunk+=ch;
+		if(chunk.length==size){
+			ans.push(chunk)
+			chunk="";
+		}
+	}) 
+
+	ans.push(chunk);
+
+	return ans;
 }
 
 // Do not change the code below
